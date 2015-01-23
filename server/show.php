@@ -1,12 +1,13 @@
 <?php
 include ("../model/number_db.php");
-class Numbers {
+class show {
 
-	function give_username_pass(){
-		$data = $_GET["input_one"];
-		$data2 = $_GET["input_two"];
-		$re = $data." ".$data2;
-		return $re;
+	function get_name(){
+	
+	}
+
+	function get_img(){
+
 	}
 }
 //Below are just for testing purpose;
