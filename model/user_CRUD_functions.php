@@ -25,7 +25,7 @@
 				while ($row = mysqli_fetch_array($result)) {
 					$user_data =array(
 					"name"=>$row['name'],
-					"picture"=>$row['picture']);
+					"comment"=>$row['picture']);
 					array_push($arr, $user_data);
 				}	
 				
@@ -44,12 +44,8 @@
 	}
 	
 
-	$db = new user_db();
-	print_r($db->get_users());
-	
-
-	$db = new user_db();
-	print_r($db->get_users());
+	/*$db = new user_db();
+	print_r($db->get_users());*/
 
 
 ?>
