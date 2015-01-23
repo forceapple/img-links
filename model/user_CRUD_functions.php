@@ -25,7 +25,7 @@
 				while ($row = mysqli_fetch_array($result)) {
 					$user_data =array(
 					"name"=>$row['name'],
-					"picture"=>$row['picture']);
+					"comment"=>$row['picture']);
 					array_push($arr, $user_data);
 				}	
 				
