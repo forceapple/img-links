@@ -20,14 +20,14 @@ class show {
 		foreach($data as $key=>$value){
 			array_push($store, $value["picture"]);
 		}
-	//var_dump($store);
+	var_dump($store);
 	return $store;
 
 	}
 
 }
-//$user = new show();
-//$user->get_img();
+$user = new show();
+$user->get_img();
 //echo $user->get_name();
 //Below are just for testing purpose;
 /*
