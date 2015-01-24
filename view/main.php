@@ -1,5 +1,6 @@
 <?php
-	include("../server/number.php");
+	include("../server/show.php");
+
 ?>
 <html>
 <head>
@@ -13,18 +14,31 @@
 
 <div class="post-wrapper">
 	
-	<div class="images"><img src="http://images.boomsbeat.com/data/images/full/44019/puppy-wink_1-jpg.jpg"</img></div>
+	<div class="images"><img src=""</img></div>
 
-	<div class="names">YO</div>
+	
 </div>	
-
+<form action="../server/listener.php" method="post">
+	<input name="name"type="text" placeholder="Name..."></input>
+	<input name="image" type="text" placeholder="Image..."></input>
+	<input type="submit">
 </form>
 
 <?php
-	$var = new Numbers();
-	echo $var->give_username_pass($word);
+	$user = new show();
+	$name=$user->get_name();
 
+	foreach($name as $key => $value) {
+		echo "<h1>".$value."</h1>";	
+	}
+	
+	$picture=$user->get_img();
 
+	foreach($picture as $key => $val) {
+		echo "<img src='".$val."'/>";	
+	}
 ?>
+
+
 </body>
 </html>
