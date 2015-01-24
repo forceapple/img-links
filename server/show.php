@@ -20,7 +20,7 @@ class show {
 		foreach($data as $key=>$value){
 			array_push($store, $value["picture"]);
 		}
-	var_dump($store);
+	//var_dump($store);
 	return $store;
 
 	}
