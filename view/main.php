@@ -21,8 +21,8 @@
 <form action="../server/listener.php" method="post">
 	<input name="name"type="text" placeholder="Name..."></input>
 	<input name="image" type="text" placeholder="Image..."></input>
-	<input name="tags" type="text" placeholder="tags seperated by comma..."
-	<input type="submit">
+	<input name="tags" type="text" placeholder="tags seperated by comma...">
+	<input type="submit" value="submit">
 </form>
 
 <?php
