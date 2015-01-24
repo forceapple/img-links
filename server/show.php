@@ -24,6 +24,12 @@ class show {
 	return $store;
 
 	}
+	function add_user(){
+		$data = $_POST["name"];
+		$data2 = $_POST["image"];
+		$db = new user_db();
+		$var = $db->add_user($data,$data2);
+	}
 
 }
 //$user = new show();
