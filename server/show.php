@@ -24,6 +24,7 @@ class show {
 	return $store;
 
 	}
+
 }
 //$user = new show();
 //$user->get_img();
