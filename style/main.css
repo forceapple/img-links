@@ -1,0 +1,26 @@
+html {
+
+	background:#aff5f7;
+}
+
+.images img, .names {
+
+	border-style:solid;
+	border-width:medium;
+	border-color:#7d8ee2;
+	width:40%;
+	text-align:center;
+
+}
+
+.images {
+
+	float:left;
+}
+
+.names {
+
+	float:right;
+	;
+	
+}
