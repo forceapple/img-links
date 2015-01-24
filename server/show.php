@@ -26,8 +26,8 @@ class show {
 	}
 
 }
-$user = new show();
-$user->get_img();
+//$user = new show();
+//$user->get_img();
 //echo $user->get_name();
 //Below are just for testing purpose;
 /*
