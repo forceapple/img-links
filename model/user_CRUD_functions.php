@@ -40,12 +40,22 @@
 		function delete_user() {
 			
 		}
+		
+		function add_tags($user_id, $tag) {
+			global $con;
+			$query = "INSERT INTO `tags`(`id`, `user_id`, `tag_name`) VALUES (null,'".$user_id."','".$tag."')";
+			$result = mysqli_query($con, $query);
+			
+			if ($result) {
+				
+			}
+		}
 			
 	}
 	
 
-	/*$db = new user_db();
-	print_r($db->get_users());*/
+	$db = new user_db();
+	print_r($db->get_users());
 
 
 ?>
