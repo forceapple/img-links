@@ -32,6 +32,15 @@ class show {
 	}
 
 }
+//$user = new show();
+//$user->get_img();
+//echo $user->get_name();
+//Below are just for testing purpose;
+/*
+$var = new Numbers();
+echo $var->give_me_one();
+echo $var->give_me_two();
+*/
 
 	//returns a random noun (string)
 	public function get_random_noun(){
@@ -62,6 +71,4 @@ class show {
 	public function insert_name($var){
 
 	}
-
-
 ?>
