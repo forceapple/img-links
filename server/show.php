@@ -44,31 +44,47 @@ echo $var->give_me_two();
 
 	//returns a random noun (string)
 	public function get_random_noun(){
-
+		$db = new user_db();
+		$nouns = $db->get_nouns();
+		$randIndex = array_rand($nouns);
+		return $nouns[$randIndex];
 	}
 
 	//returns a random verb (string)
 	public function get_random_verb(){
-
+		$db = new user_db();
+		$verbs = $db->get_verbs();
+		$randIndex = array_rand($verbs);
+		return $verbs[$randIndex];
 	}
 
 	//returns a random name (string)
 	public function get_random_name(){
+		$db = new user_db();
+		$names = $db->get_names();
+		$randIndex = array_rand($names);
+		return $names[$randIndex];
 
 	}
 
 	//passes the noun to DB to insert the noun
 	public function insert_noun($var){
-
+		$user_noun = strip_tags($_POST['noun']);
+		$db = new user_db();
+		$db->insert_noun($user_noun);
 	}
 
 	//passes the verb to DB to insert the verb
 	public function insert_verb($var){
-
+		$user_verb = strip_tags($_POST['verb']);
+		$db = new user_db();
+		$db->insert_verb($user_verb);
 	}
 
 	//passes the name to DB to insert the name
 	public function insert_name($var){
-
+		$user_name = strip_tags($_POST['name']);
+		$db = new user_db();
+		$db->insert_name($user_name);
 	}
 ?>
