@@ -2,30 +2,71 @@
 	//create, read, update, delete users
 	
 	require("connect.php");
+
 	
-	class user_db{
+	class quiz_db{
 		
-		function add_user($name, $picture) {
+		function insert_name($name) {
 			global $con;
-			$query = "INSERT INTO `users`(`id`, `name`, `picture`) VALUES (null,'".$name."','".$picture."')";
+			$query = "INSERT INTO `name`(`id`, `name`) VALUES (null,'".$name."')";
 			$result = mysqli_query($con, $query);
-			
-			if ($result) {
-				
-			}
+		
+		}
+		function insert_noun($noun) {
+			global $con;
+			$query = "INSERT INTO `nouns`(`id`, `name`) VALUES (null,'".$noun."')";
+			$result = mysqli_query($con, $query);
+		
+		}
+		function insert_verb($verb) {
+			global $con;
+			$query = "INSERT INTO `verbs`(`id`, `name`) VALUES (null,'".$verb."')";
+			$result = mysqli_query($con, $query);
+		
 		}
 		
-		function get_users() {
+		function get_name() {
 			global $con;
-			$query = "SELECT * FROM users";
+			$query = "SELECT * FROM name";
 			$result = mysqli_query($con, $query);
 			
 			if ($result) {
 				$arr = array();
 				while ($row = mysqli_fetch_array($result)) {
 					$user_data =array(
-					"name"=>$row['name'],
-					"picture"=>$row['picture']);
+					"name"=>$row['name']);
+					array_push($arr, $user_data );
+				}	
+				
+				return $arr;
+			}
+		}
+		function get_noun() {
+			global $con;
+			$query = "SELECT * FROM nouns";
+			$result = mysqli_query($con, $query);
+			
+			if ($result) {
+				$arr = array();
+				while ($row = mysqli_fetch_array($result)) {
+					$user_data =array(
+					"nouns"=>$row['nouns']);
+					array_push($arr, $user_data);
+				}	
+				
+				return $arr;
+			}
+		}
+		function get_verb() {
+			global $con;
+			$query = "SELECT * FROM verbs";
+			$result = mysqli_query($con, $query);
+			
+			if ($result) {
+				$arr = array();
+				while ($row = mysqli_fetch_array($result)) {
+					$user_data =array(
+					"verbs"=>$row['verbs']);
 					array_push($arr, $user_data);
 				}	
 				
@@ -33,29 +74,13 @@
 			}
 		}
 		
-		function update_user() {
-			
-		}
-		
-		function delete_user() {
-			
-		}
-		
-		function add_tags($user_id, $tag) {
-			global $con;
-			$query = "INSERT INTO `tags`(`id`, `user_id`, `tag_name`) VALUES (null,'".$user_id."','".$tag."')";
-			$result = mysqli_query($con, $query);
-			
-			if ($result) {
-				
-			}
-		}
+	
 			
 	}
-	
+	//$name="john snow";
 
-	//$db = new user_db();
-	//print_r($db->get_users());
-
+	//$db = new quiz_db();
+	//print_r($db->get_name());
+	//$db->insert_name($name);
 
 ?>
