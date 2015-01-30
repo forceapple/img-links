@@ -9,10 +9,11 @@
 <style>
 html {
 	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	}
 #wrapper {
 	margin: auto auto;
-	width: 800px;
+	width: 70%;
 	}
 input {
 	padding: 1.5em;
@@ -23,6 +24,15 @@ input {
 	}
 .submit_btn {
 	background-color: #78B9DD;
+	color: #fff;
+	width: auto;
+	padding-left: 3em;
+	padding-right: 3em;
+	text-align: center;
+	}
+.generate_btn {
+	background-color: #78B9DD;
+	font-size: 0.5em;
 	color: #fff;
 	width: auto;
 	padding-left: 3em;
@@ -42,6 +52,9 @@ form {
 	font-weight: semi-bold;
 	text-align: center;
 	color: #EF6906;
+	height: 600px;
+	background-color: #F4F3E1;
+	margin-bottom: 1em;
 	}
 </style>
 </head>
@@ -62,6 +75,7 @@ form {
 </form>
 	
  <div id="random-text-box">
+ <input type="submit" class="generate_btn" value="Generate a sentence">
  	<?php
 	$user = new show();
 	$name=$user->get_name();
