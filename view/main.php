@@ -75,15 +75,20 @@ form {
 </form>
 	
  <div id="random-text-box">
- <input type="submit" class="generate_btn" value="Generate a sentence">
+ <form action="" method="post">
+	 <input type="submit" class="generate_btn" name="generate_btn" value="Generate a sentence">
+ </form>
  	<?php
-	$word = new show();
-	$noun=$word->get_random_noun();
-	$verb= $word->get_random_verb();
-	$name= $word->get_random_name();
-
-	$random_sentence = $name." ".$verb." ".$noun;
-	echo $random_sentence;
+	if (isset($_POST['generate_btn']))
+	{
+		$word = new show();
+		$noun=$word->get_random_noun();
+		$verb= $word->get_random_verb();
+		$name= $word->get_random_name();
+	
+		$random_sentence = $name." ".$verb." ".$noun;
+		echo $random_sentence;
+	}
 ?>
  </div>
 </div>	
