@@ -4,28 +4,65 @@
 ?>
 <html>
 <head>
-<title>Lab</title>
-
-<link rel="stylesheet" type="text/css" href="../style/main.css">
+<title>Sentence Generator</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+<style>
+html {
+	font-family: 'Open Sans', sans-serif;
+	}
+#wrapper {
+	margin: auto auto;
+	width: 800px;
+	}
+input {
+	padding: 1.5em;
+	font-size: 2em;
+	margin: 1em;
+	font-weight: 400;
+	text-align: center;
+	}
+.submit_btn {
+	background-color: #78B9DD;
+	color: #fff;
+	width: auto;
+	padding-left: 3em;
+	padding-right: 3em;
+	text-align: center;
+	}
+h1 {
+	text-align: center;
+	}
+form {
+	 display: inline-block;
+    text-align: center;
+	}
+	
+#random-text-box {
+	font-size: 4em;	
+	font-weight: semi-bold;
+	text-align: center;
+	color: #EF6906;
+	}
+</style>
 </head>
 
 
 <body>
 
-<div class="post-wrapper">
+<div id="wrapper">
 	
-	<div class="images"><img src=""</img></div>
-
-	
-</div>	
+	<h1>Sentence Generator</h1>
 <form action="../server/listener.php" method="post">
-	<input name="name"type="text" placeholder="Name..."></input>
-	<input name="image" type="text" placeholder="Image..."></input>
-	<input name="tags" type="text" placeholder="tags seperated by comma...">
-	<input type="submit" value="submit">
+	<input name="name"type="text" placeholder="Name"><br>
+    <input type="submit" class="submit_btn" name="name_btn" value="submit">
+	<input name="verb" type="text" placeholder="Verb"><br>
+    <input type="submit" class="submit_btn" name="verb_btn" value="submit">
+	<input name="noun" type="text" placeholder="Noun"><br>
+    <input type="submit" class="submit_btn" name="noun_btn" value="submit">
 </form>
-
-<?php
+	
+ <div id="random-text-box">
+ 	<?php
 	$user = new show();
 	$name=$user->get_name();
 
@@ -39,7 +76,8 @@
 		echo "<img src='".$val."'/>";	
 	}
 ?>
-
+ </div>
+</div>	
 
 </body>
 </html>
