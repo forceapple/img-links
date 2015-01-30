@@ -25,7 +25,7 @@
 		
 		}
 		
-		function get_names() {
+		function get_name() {
 			global $con;
 			$query = "SELECT * FROM name";
 			$result = mysqli_query($con, $query);
@@ -33,15 +33,14 @@
 			if ($result) {
 				$arr = array();
 				while ($row = mysqli_fetch_array($result)) {
-					$user_data =array(
-					"name"=>$row['name']);
+					$user_data =$row['name'];
 					array_push($arr, $user_data );
 				}	
 				
 				return $arr;
 			}
 		}
-		function get_nouns() {
+		function get_noun() {
 			global $con;
 			$query = "SELECT * FROM nouns";
 			$result = mysqli_query($con, $query);
@@ -49,15 +48,14 @@
 			if ($result) {
 				$arr = array();
 				while ($row = mysqli_fetch_array($result)) {
-					$user_data =array(
-					"nouns"=>$row['nouns']);
+					$user_data =$row['nouns'];
 					array_push($arr, $user_data);
 				}	
 				
 				return $arr;
 			}
 		}
-		function get_verbs() {
+		function get_verb() {
 			global $con;
 			$query = "SELECT * FROM verbs";
 			$result = mysqli_query($con, $query);
@@ -65,8 +63,7 @@
 			if ($result) {
 				$arr = array();
 				while ($row = mysqli_fetch_array($result)) {
-					$user_data =array(
-					"verbs"=>$row['verbs']);
+					$user_data =$row['verbs'];
 					array_push($arr, $user_data);
 				}	
 				
