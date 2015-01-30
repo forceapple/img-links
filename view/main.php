@@ -77,18 +77,13 @@ form {
  <div id="random-text-box">
  <input type="submit" class="generate_btn" value="Generate a sentence">
  	<?php
-	$user = new show();
-	$name=$user->get_name();
+	$word = new show();
+	$noun=$word->get_random_noun();
+	$verb= $word->get_random_verb();
+	$name= $word->get_random_name();
 
-	foreach($name as $key => $value) {
-		echo "<h1>".$value."</h1>";	
-	}
-	
-	$picture=$user->get_img();
-
-	foreach($picture as $key => $val) {
-		echo "<img src='".$val."'/>";	
-	}
+	$random_sentence = $name." ".$verb." ".$noun;
+	echo $random_sentence;
 ?>
  </div>
 </div>	
