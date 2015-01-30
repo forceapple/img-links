@@ -6,9 +6,7 @@ class show {
 		$db = new quiz_db();
 		$nouns = $db->get_nouns();
 		$randIndex = array_rand($nouns);
-
-		$noun = $nouns[$randIndex];
-		return $noun;
+		return $nouns[$randIndex];
 	}
 
 	//returns a random verb (string)
@@ -47,8 +45,9 @@ class show {
 	}
 
 }
-
-//$test = new show();
+$n = "lol";
+$test = new show();
+$test->insert_noun($n);
 //print_r($test->get_random_noun());
 	
 ?>
