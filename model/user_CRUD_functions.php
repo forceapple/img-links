@@ -54,8 +54,8 @@
 	}
 	
 
-	$db = new user_db();
-	print_r($db->get_users());
+	//$db = new user_db();
+	//print_r($db->get_users());
 
 
 ?>

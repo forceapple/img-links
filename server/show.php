@@ -24,9 +24,9 @@ class show {
 	return $store;
 
 	}
-	function add_user(){
-		$data = $_POST["name"];
-		$data2 = $_POST["image"];
+	function add_user($name,$img){
+		$data = $name;
+		$data2 = $img;
 		$db = new user_db();
 		$var = $db->add_user($data,$data2);
 	}
