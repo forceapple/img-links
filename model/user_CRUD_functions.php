@@ -25,7 +25,7 @@
 		
 		}
 		
-		function get_name() {
+		function get_names() {
 			global $con;
 			$query = "SELECT * FROM name";
 			$result = mysqli_query($con, $query);
@@ -41,7 +41,7 @@
 				return $arr;
 			}
 		}
-		function get_noun() {
+		function get_nouns() {
 			global $con;
 			$query = "SELECT * FROM nouns";
 			$result = mysqli_query($con, $query);
@@ -57,7 +57,7 @@
 				return $arr;
 			}
 		}
-		function get_verb() {
+		function get_verbs() {
 			global $con;
 			$query = "SELECT * FROM verbs";
 			$result = mysqli_query($con, $query);
