@@ -6,9 +6,7 @@ class show {
 		$db = new quiz_db();
 		$nouns = $db->get_nouns();
 		$randIndex = array_rand($nouns);
-
-		$noun = $nouns[$randIndex];
-		return $noun;
+		return $nouns[$randIndex];
 	}
 
 	//returns a random verb (string)
@@ -43,12 +41,10 @@ class show {
 	//passes the name to DB to insert the name
 	public function insert_name($name){
 		$db = new quiz_db();
-		$db->insert_name($user_name);
+		$db->insert_name($name);
 	}
 
 }
-
-//$test = new show();
 //print_r($test->get_random_noun());
 	
 ?>

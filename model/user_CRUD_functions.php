@@ -13,6 +13,8 @@
 		
 		}
 		function insert_noun($noun) {
+			echo $noun;
+			exit;
 			global $con;
 			$query = "INSERT INTO nouns (`name`) VALUES ('".$noun."')";
 			$result = mysqli_query($con, $query);
