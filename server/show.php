@@ -41,13 +41,10 @@ class show {
 	//passes the name to DB to insert the name
 	public function insert_name($name){
 		$db = new quiz_db();
-		$db->insert_name($user_name);
+		$db->insert_name($name);
 	}
 
 }
-$n = "lol";
-$test = new show();
-$test->insert_noun($n);
 //print_r($test->get_random_noun());
 	
 ?>
