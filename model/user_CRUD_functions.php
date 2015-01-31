@@ -14,13 +14,13 @@
 		}
 		function insert_noun($noun) {
 			global $con;
-			$query = "INSERT INTO nouns (`name`) VALUES ('".$noun."')";
+			$query = "INSERT INTO nouns (`noun`) VALUES ('".$noun."')";
 			$result = mysqli_query($con, $query);
 		
 		}
 		function insert_verb($verb) {
 			global $con;
-			$query = "INSERT INTO verbs ( `name`) VALUES ('".$verb."')";
+			$query = "INSERT INTO verbs ( `verb`) VALUES ('".$verb."')";
 			$result = mysqli_query($con, $query);
 		
 		}
