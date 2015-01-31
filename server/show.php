@@ -45,6 +45,5 @@ class show {
 	}
 
 }
-//print_r($test->get_random_noun());
 	
 ?>
