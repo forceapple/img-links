@@ -1,6 +1,9 @@
 <?php
 	include("../server/show.php");
+	session_start();
 
+	if(!empty($_SESSION['status']))
+		$success_msg = $_SESSION['status'];
 ?>
 <html>
 <head>
@@ -57,6 +60,17 @@ form {
 	background-color: #F4F3E1;
 	margin-bottom: 1em;
 	}
+
+#msg-box {
+	background-color: #D4E5B5;
+	color: #4D563E;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width: 300px;
+	margin: auto;
+	}
 </style>
 </head>
 
@@ -66,6 +80,12 @@ form {
 <div id="wrapper">
 	
 	<h1>Sentence Generator</h1>
+    <?php 
+	
+	if (!empty($success_msg))
+		echo "<div id='msg-box'>".$success_msg."</div>"; 
+	
+	?>
 <form action="../server/listener.php" method="post">
 	<input name="name"type="text" placeholder="Name" required><br>
     <input type="submit" class="submit_btn" name="name_btn" value="submit"><br>
