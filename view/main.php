@@ -67,11 +67,15 @@ form {
 	
 	<h1>Sentence Generator</h1>
 <form action="../server/listener.php" method="post">
-	<input name="name"type="text" placeholder="Name"><br>
+	<input name="name"type="text" placeholder="Name" required><br>
     <input type="submit" class="submit_btn" name="name_btn" value="submit"><br>
-	<input name="verb" type="text" placeholder="Verb"><br>
+ </form>
+ <form action="../server/listener.php" method="post">
+	<input name="verb" type="text" placeholder="Verb" required><br>
     <input type="submit" class="submit_btn" name="verb_btn" value="submit"><br>
-	<input name="noun" type="text" placeholder="Noun"><br>
+ </form>
+ <form action="../server/listener.php" method="post">
+	<input name="noun" type="text" placeholder="Noun" required><br>
     <input type="submit" class="submit_btn" name="noun_btn" value="submit"><br>
 </form>
 	
