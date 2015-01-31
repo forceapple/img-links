@@ -29,19 +29,22 @@ class show {
 	//passes the noun to DB to insert the noun
 	public function insert_noun($noun){
 		$db = new quiz_db();
-		$db->insert_noun($noun);
+		if($db->insert_noun($noun)){return true;}
+		return false;
 	}
 
 	//passes the verb to DB to insert the verb
 	public function insert_verb($verb){
 		$db = new quiz_db();
-		$db->insert_verb($verb);
+		if($db->insert_verb($verb)){return true;}
+		return false;
 	}
 
 	//passes the name to DB to insert the name
 	public function insert_name($name){
 		$db = new quiz_db();
-		$db->insert_name($name);
+		if($db->insert_name($name)){return true;}
+		return false;
 	}
 
 }
