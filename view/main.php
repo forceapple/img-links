@@ -43,8 +43,9 @@ h1 {
 	text-align: center;
 	}
 form {
-	 display: inline-block;
     text-align: center;
+	margin: auto;
+	width: 600px;
 	}
 	
 #random-text-box {
