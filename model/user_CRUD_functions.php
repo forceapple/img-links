@@ -8,24 +8,24 @@
 		
 		function insert_name($name) {
 			global $con;
-			$query = "INSERT INTO `name`(`id`, `name`) VALUES (null,'".$name."')";
+			$query = "INSERT INTO  name(`name`) VALUES ('".$name."')";
 			$result = mysqli_query($con, $query);
 		
 		}
 		function insert_noun($noun) {
 			global $con;
-			$query = "INSERT INTO `nouns`(`id`, `name`) VALUES (null,'".$noun."')";
+			$query = "INSERT INTO nouns (`name`) VALUES ('".$noun."')";
 			$result = mysqli_query($con, $query);
 		
 		}
 		function insert_verb($verb) {
 			global $con;
-			$query = "INSERT INTO `verbs`(`id`, `name`) VALUES (null,'".$verb."')";
+			$query = "INSERT INTO verbs ( `name`) VALUES ('".$verb."')";
 			$result = mysqli_query($con, $query);
 		
 		}
 		
-		function get_name() {
+		function get_names() {
 			global $con;
 			$query = "SELECT * FROM name";
 			$result = mysqli_query($con, $query);
@@ -40,7 +40,7 @@
 				return $arr;
 			}
 		}
-		function get_noun() {
+		function get_nouns() {
 			global $con;
 			$query = "SELECT * FROM nouns";
 			$result = mysqli_query($con, $query);
@@ -55,7 +55,7 @@
 				return $arr;
 			}
 		}
-		function get_verb() {
+		function get_verbs() {
 			global $con;
 			$query = "SELECT * FROM verbs";
 			$result = mysqli_query($con, $query);
