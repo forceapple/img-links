@@ -10,19 +10,31 @@
 			global $con;
 			$query = "INSERT INTO  name(`name`) VALUES ('".$name."')";
 			$result = mysqli_query($con, $query);
-		
+
+			if($result){
+				return true;
+			}
+			return false;
 		}
 		function insert_noun($noun) {
 			global $con;
 			$query = "INSERT INTO nouns (`nouns`) VALUES ('".$noun."')";
 			$result = mysqli_query($con, $query);
-		
+			
+			if($result){
+				return true;
+			}
+			return false;
 		}
 		function insert_verb($verb) {
 			global $con;
 			$query = "INSERT INTO verbs ( `verbs`) VALUES ('".$verb."')";
 			$result = mysqli_query($con, $query);
-		
+			
+			if($result){
+				return true;
+			}
+			return false;
 		}
 		
 		function get_names() {
