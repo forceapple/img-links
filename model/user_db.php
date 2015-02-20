@@ -2,6 +2,30 @@
 
 require ("connect.php");
 class User_DB{
+	function get_comments_by_uid($uid){
+		global $con;
+		$query = "SELECT * FROM comments LEFT JOIN user ON user_comments.user_id = user.id 
+										LEFT JOIN user_comments ON user_comments.comment_id = comments.id
+										WHERE user.id = ".$uid;
+		$result = mysqli_query($con, $query);
+		if($result){
+			$arr = array();
+			while($row = mysqli_fetch_array($result)){
+				$index = $row["profile_id"];
+				$arr[$index] = $row['path'];
+			}
+			return $arr;
+		}
+	}
+	function down_vote_comment($cid){
+
+	}
+	function up_vote_comment($cid){
+
+	}
+	function get_comment_vote($cid){
+
+	}
 	function get_all_img(){
 		global $con;
 		$query = "SELECT * FROM user_images";
