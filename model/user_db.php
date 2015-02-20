@@ -4,16 +4,21 @@ require ("connect.php");
 class User_DB{
 	function get_comments_by_uid($uid){
 		global $con;
-		$query = "SELECT * FROM comments LEFT JOIN user ON user_comments.user_id = user.id 
-										LEFT JOIN user_comments ON user_comments.comment_id = comments.id
-										WHERE user.id = ".$uid;
+		
+		$query = "SELECT * FROM comments LEFT JOIN user_comments ON user_comments.comment_id = comments.id WHERE user_id =".$uid;
 		$result = mysqli_query($con, $query);
 		if($result){
 			$arr = array();
 			while($row = mysqli_fetch_array($result)){
-				$index = $row["profile_id"];
-				$arr[$index] = $row['path'];
+				$query2 = "SELECT COUNT(comment_id) FROM votes WHERE comment_id=".$row['comment_id'];
+				$result2 = mysqli_query($con, $query2);
+				$votes = mysqli_fetch_row($result2);
+				//print_r($votes);
+				$arr['comment'] = $row['comment'];
+				$arr['votes'] = $votes[0];
+				$arr2[]=$arr;
 			}
+			print_r($arr2);
 			return $arr;
 		}
 	}
@@ -188,8 +193,9 @@ class User_DB{
 	}
 }
 
-	//$db = new User_DB();
+	$db = new User_DB();
 	//print_r($db->insert_profile("test3.jpg", 1));
-	//$db->get_all_img();
+	$test = "1";
+	$db->get_comments_by_uid($test);
 
 	//$db->insert_img_by_user('122.jpg','Ilya');
