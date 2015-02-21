@@ -2,7 +2,7 @@
 require_once('project_controller.php');
 //$_GET['mode'] = 0;
 //$_GET['uid'] = 1;
-
+/*
 if(isset ($_GET['mode'])){
 	switch($_GET['mode']){
 		case 0:
@@ -23,9 +23,17 @@ if(isset ($_GET['mode'])){
 		break;
 	}
 }
+*/
 
-
-
+if( isset ($_GET['phase'])){
+	//phase 0 = get all images
+	switch($_GET['phase']){
+		case 0:
+				$user = new User();
+				echo json_encode($user->get_comments_by_user_id($_GET['uid']));
+		break;
+	}
+}
 // 1 - get all the comments for  - get_comments_by_user_id($uid)
 // echo json_encode($arr);
 // 
@@ -34,7 +42,7 @@ if(isset ($_GET['mode'])){
 
 
 
-
+/*
 if(isset($_POST['phase'])){
 	switch($_POST['phase']){
 		case 1: //insert profile pic
@@ -52,7 +60,7 @@ if(isset($_POST['phase'])){
 		break;
 	}
 }
-
+*/
 
 
 

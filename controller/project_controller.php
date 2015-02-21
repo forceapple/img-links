@@ -1,7 +1,7 @@
 <?php
 require_once('../model/user_db.php');
 class User{
-	
+	/*
 	function get_user_info($uid) {
 		$db = new User_DB;
 		
@@ -53,24 +53,16 @@ class User{
 		return $sv->get_comments_by_profile_id($pid);
 		
 	}
-
+	*/
 	//return array of comments
 	function get_comments_by_user_id($uid){
 		$sv = new User_DB();
-		return $sv->get_comments_by_user_id($uid);
+		return $sv->get_comments_by_uid($uid);
 		
 	}
-
-	//return number of votes (int)
-	function get_votes_by_comment_id($cid){
-		$sv = new User_DB();
-		$arr = $sv->get_votes_by_comment_id($cid);
-		return count($arr);
-		
- 	}
 }
 
-//$db = new User();
-//print_r($db->get_user_info(1));
+$db = new User();
+print_r($db->get_comments_by_user_id(1));
 
 ?>

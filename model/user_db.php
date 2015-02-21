@@ -22,6 +22,7 @@ class User_DB{
 			return $arr;
 		}
 	}
+	/*
 	function down_vote_comment($cid){
 
 	}
@@ -191,11 +192,12 @@ class User_DB{
 			return false;
 		}
 	}
+	*/
 }
 
-	$db = new User_DB();
+	//$db = new User_DB();
 	//print_r($db->insert_profile("test3.jpg", 1));
-	$test = "1";
-	$db->get_comments_by_uid($test);
+	//$test = "1";
+	//$db->get_comments_by_uid($test);
 
 	//$db->insert_img_by_user('122.jpg','Ilya');
