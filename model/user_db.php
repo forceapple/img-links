@@ -18,8 +18,8 @@ class User_DB{
 				$arr['votes'] = $votes[0];
 				$arr2[]=$arr;
 			}
-			print_r($arr2);
-			return $arr;
+			
+			return $arr2;
 		}
 	}
 	/*

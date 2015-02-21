@@ -1,7 +1,7 @@
 <?php
 require_once('project_controller.php');
-//$_GET['mode'] = 0;
-//$_GET['uid'] = 1;
+$_GET['phase'] = 0;
+$_GET['uid'] = 1;
 /*
 if(isset ($_GET['mode'])){
 	switch($_GET['mode']){
