@@ -62,7 +62,7 @@ class User{
 	}
 }
 
-$db = new User();
-print_r($db->get_comments_by_user_id(1));
+//$db = new User();
+//print_r($db->get_comments_by_user_id(1));
 
 ?>
