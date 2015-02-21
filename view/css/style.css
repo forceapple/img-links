@@ -37,8 +37,16 @@ body {
 }
 
 .images {
-	max-height: 300px;
+	max-height: 200px;
 	max-width: 500px;
+	margin: 1em;
+	float: left;
+}
+
+.comment {
+	height: 200px;
+	line-height: 200px;
+	float: left;
 	margin: 1em;
 }
 
