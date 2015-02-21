@@ -53,6 +53,21 @@ class User{
 		return $sv->get_comments_by_profile_id($pid);
 		
 	}
+
+	//return array of comments
+	function get_comments_by_user_id($uid){
+		$sv = new User_DB();
+		return $sv->get_comments_by_user_id($uid);
+		
+	}
+
+	//return number of votes (int)
+	function get_votes_by_comment_id($cid){
+		$sv = new User_DB();
+		$arr = $sv->get_votes_by_comment_id($cid);
+		return count($arr);
+		
+ 	}
 }
 
 //$db = new User();

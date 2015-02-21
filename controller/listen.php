@@ -25,15 +25,14 @@ if(isset ($_GET['mode'])){
 }
 
 
-if( isset ($_GET['phase'])){
-	//phase 0 = get all images
-	switch($_GET['phase']){
-		case 0:
-				$user = new User();
-				echo json_encode($user->get_all_img());
-		break;
-	}
-}
+
+// 1 - get all the comments for  - get_comments_by_user_id($uid)
+// echo json_encode($arr);
+// 
+
+
+
+
 
 
 if(isset($_POST['phase'])){
