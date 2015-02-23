@@ -16,6 +16,7 @@ class User_DB{
 				//print_r($votes);
 				$arr['comment'] = $row['comment'];
 				$arr['votes'] = $votes[0];
+				$arr['comment_id'] = $row['comment_id'];
 				$arr2[]=$arr;
 			}
 			
@@ -27,7 +28,9 @@ class User_DB{
 
 	}
 	function up_vote_comment($cid){
-
+		global $con;
+		$query = "INSERT INTO votes values ('".$cid."')";	
+		$result = mysqli_query($con, $query);
 	}
 	function get_comment_vote($cid){
 
